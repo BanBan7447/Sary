@@ -12,5 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Bảng 2
+        // Bảng giáng sinh
+        // djkgkdjkfgkrnj
     }
 }
