@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page_Sign_In">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/pic_sign_in"
+        android:scaleY="1.5"
+        android:scaleX="1.2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:text="S"
+        android:textSize="170sp"
+        android:textColor="@color/main"
+        android:gravity="center"
+        android:fontFamily="@font/salsa_regular"/>
+
+    <Button
+        android:id="@+id/Intro_SignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="40dp"
+        android:text="Đăng Nhập"
+        android:textSize="24sp"
+        android:background="@drawable/radius_shape_18"
+        app:backgroundTint="@color/main"/>
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/radius_shape_18"
+    android:backgroundTint="@color/LightBlack"
+    android:layout_margin="20dp"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TT_MaPhieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Mã phiếu: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"/>
+
+    <TextView
+        android:id="@+id/SQL_MaPhieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập mã phiếu"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_MaPhieu"/>
+
+    <TextView
+        android:id="@+id/TT_MaThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Mã thành viên: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@id/TT_MaPhieu"/>
+
+    <TextView
+        android:id="@+id/SQL_MaThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập mã thành viên"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_MaThanhVien"
+        android:layout_below="@+id/TT_MaPhieu"/>
+
+    <TextView
+        android:id="@+id/TT_HoTen_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Họ tên: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@id/TT_MaThanhVien"/>
+
+    <TextView
+        android:id="@+id/SQL_HoTen_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập họ tên thành viên"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_HoTen_TV"
+        android:layout_below="@+id/TT_MaThanhVien"/>
+
+    <TextView
+        android:id="@+id/TT_MaThuThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Mã thủ thư: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@id/TT_HoTen_TV"/>
+
+    <TextView
+        android:id="@+id/SQL_MaThuThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập mã thủ thư"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_MaThuThu"
+        android:layout_below="@+id/TT_HoTen_TV"/>
+
+    <TextView
+        android:id="@+id/TT_HoTen_TT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Họ tên: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@+id/TT_MaThuThu"/>
+
+    <TextView
+        android:id="@+id/SQL_HoTen_TT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập họ tên thủ thư"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_HoTen_TT"
+        android:layout_below="@+id/TT_MaThuThu"/>
+
+    <TextView
+        android:id="@+id/TT_NgayThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Ngày thuê: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@+id/TT_HoTen_TT"/>
+
+    <TextView
+        android:id="@+id/SQL_NgayThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập ngày thuê"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_NgayThue"
+        android:layout_below="@+id/TT_HoTen_TT"/>
+
+    <TextView
+        android:id="@+id/TT_ThoiGianTraSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Thời gian trả sách: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@+id/TT_NgayThue"/>
+
+    <TextView
+        android:id="@+id/SQL_ThoiGianTraSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập ngày trả sách"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_ThoiGianTraSach"
+        android:layout_below="@+id/TT_NgayThue"/>
+
+    <TextView
+        android:id="@+id/TT_TrangThai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Trạng thái: "
+        android:textStyle="bold"
+        android:textColor="@color/main2"
+        android:layout_below="@+id/TT_ThoiGianTraSach"/>
+
+    <TextView
+        android:id="@+id/SQL_TrangThai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập trạng thái"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/TT_TrangThai"
+        android:layout_below="@+id/TT_ThoiGianTraSach"/>
+
+    <TextView
+        android:id="@+id/Fix_PhieuMuon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh sửa"
+        android:textColor="@color/main"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/TT_TrangThai"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/SQL_TrangThai"/>
+
+    <TextView
+        android:id="@+id/Del_PhieuMuon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xoá"
+        android:textColor="@color/Delete"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:paddingLeft="25dp"
+        android:layout_below="@id/TT_TrangThai"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/Fix_PhieuMuon"/>
+
+</RelativeLayout>
