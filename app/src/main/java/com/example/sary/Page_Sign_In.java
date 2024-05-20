@@ -3,6 +3,7 @@ package com.example.sary;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,14 @@ public class Page_Sign_In extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.radius_dialog));
         alertDialog.show();
+
+        Button btnSignIn_Home = viewSignIn.findViewById(R.id.btn_SignIn);
+        btnSignIn_Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Page_Sign_In.this, Page_Home.class));
+            }
+        });
 
     }
 }
