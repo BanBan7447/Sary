@@ -24,6 +24,7 @@ public class Page_Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ui_page_home);
 
+
         drawerLayout = findViewById(R.id.DrawerLayout);
 
         Toolbar toolbar = findViewById(R.id.Drawer_ToolBar);
