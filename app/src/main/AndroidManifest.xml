@@ -13,11 +13,23 @@
         android:theme="@style/Theme.Sary"
         tools:targetApi="31">
         <activity
+            android:name=".Fragment.FragPage_Quan_Ly_Thanh_Vien"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragPage_Quan_Ly_Phieu_Muon"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragPage_Quan_Ly_Sach"
+            android:exported="false" />
+        <activity
+            android:name=".Fragment.FragPage_Quan_Ly_Loai_Sach"
+            android:exported="false" />
+        <activity
             android:name=".Page_Sign_In"
             android:exported="false" />
         <activity
             android:name=".Page_Home"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Page_Intro"
             android:exported="true">
