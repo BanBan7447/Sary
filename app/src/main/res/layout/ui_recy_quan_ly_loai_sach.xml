@@ -1,267 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="200dp"
+    android:layout_height="220dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/radius_shape_18"
     android:backgroundTint="@color/LightBlack"
     android:padding="15dp"
-    android:layout_margin="15dp">
+    android:layout_marginTop="14dp"
+    android:layout_marginLeft="14dp"
+    android:layout_marginRight="7dp">
 
-<!--    Mã phiếu    -->
+<!--    RecyclerView của quản lý loại sách-->
+
+    <!--    Ảnh Icon của loại sách-->
+    <ImageView
+        android:id="@+id/icon_TheLoaiSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_loai_sach_kinh_doanh"
+        android:layout_alignParentEnd="true"/>
+    <!--    Ảnh Icon của loại sách-->
+
+
+    <!--    Mã thể loại sách-->
     <TextView
-        android:id="@+id/TT_MaPhieu"
+        android:id="@+id/TT_MaTheLoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Mã phiếu: "
+        android:text="Mã: "
         android:textColor="@color/main"
         android:textStyle="bold"
-        android:textSize="15sp"/>
-    <!--Dữ liệu cứng của mã phiếu-->
+        android:textSize="14sp"
+        android:layout_above="@+id/TT_TenTheLoaiSach"/>
+    <!--    Dữ liệu cứng của mã thể loại sách-->
 
     <TextView
-        android:id="@+id/SQL_MaPhieu"
+        android:id="@+id/SQL_MaTheLoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Dữ liệu mã phiếu"
+        android:text="Mã thể loại sách"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_MaPhieu"/>
-    <!--Dữ liệu SQL của mã phiếu-->
-<!--    Mã phiếu    -->
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/TT_MaTheLoaiSach"
+        android:layout_above="@+id/SQL_TenTheLoaiSach"/>
+    <!--    Dữ liệu SQL của mã thể loại sách-->
+    <!--    Mã thể loại sách-->
 
 
-<!--    Mã thành viên    -->
+    <!--    Tên thể loại sách-->
     <TextView
-        android:id="@+id/TT_MaThanhVien"
+        android:id="@+id/TT_TenTheLoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Mã thành viên: "
+        android:text="Thể loại: "
         android:textColor="@color/main"
         android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_MaPhieu"/>
-    <!--Dữ liệu cứng của mã thành viên-->
+        android:textSize="14sp"
+        android:layout_above="@id/txtFix_LoaiSach"/>
+    <!--    Dữ liệu cứng của tên thể loại sách-->
 
     <TextView
-        android:id="@+id/SQL_MaThanhVien"
+        android:id="@+id/SQL_TenTheLoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="Dữ liệu mã thành viên"
+        android:text="Tên thể loại sách"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_MaThanhVien"
-        android:layout_below="@id/SQL_MaPhieu"/>
-    <!--Dữ liệu SQL của mã thành viên-->
-    <!--    Mã thành viên    -->
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/TT_TenTheLoaiSach"
+        android:layout_above="@id/txtDel_LoaiSach"/>
+    <!--    Dữ liệu SQL của mã thể loại sách-->
+    <!--    Tên thể loại sách-->
 
 
-<!--    Họ tên thành viên    -->
+    <!--    Text Chỉnh sửa-->
     <TextView
-        android:id="@+id/TT_HoTenThanhVien"
+        android:id="@+id/txtFix_LoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Họ tên thành viên: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_MaThanhVien"/>
-    <!--Dữ liệu cứng của họ tên thành viên-->
-
-    <TextView
-        android:id="@+id/SQL_HoTenThanhVien"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu họ tên thành viên"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_HoTenThanhVien"
-        android:layout_below="@id/SQL_MaThanhVien"/>
-    <!--Dữ liệu SQL của họ tên thành viên-->
-    <!--    Họ tên thành viên    -->
-
-
-<!--    Mã thủ thư    -->
-    <TextView
-        android:id="@+id/TT_MaThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Mã thủ thư: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_HoTenThanhVien"/>
-    <!--Dữ liệu cứng của mã thủ thư-->
-
-    <TextView
-        android:id="@+id/SQL_MaThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu mã thủ thư"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_MaThuThu"
-        android:layout_below="@id/SQL_HoTenThanhVien"/>
-    <!--Dữ liệu SQL của mã thủ thư-->
-    <!--    Mã thủ thư    -->
-
-
-<!--    Họ tên thủ thư    -->
-    <TextView
-        android:id="@+id/TT_HoTenThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Họ tên thủ thư: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_MaThuThu"/>
-    <!--Dữ liệu cứng của họ tên thủ thư-->
-
-    <TextView
-        android:id="@+id/SQL_HoTenThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu họ tên thủ thư"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_HoTenThuThu"
-        android:layout_below="@id/SQL_MaThuThu"/>
-    <!--Dữ liệu SQL của họ tên thủ thư-->
-    <!--    Họ tên thủ thư    -->
-
-
-<!--    Ngày thuê    -->
-    <TextView
-        android:id="@+id/TT_NgayThue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Ngày thuê: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_HoTenThuThu"/>
-    <!--Dữ liệu cứng của ngày thuê-->
-
-    <TextView
-        android:id="@+id/SQL_NgayThue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu ngày thuê"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_NgayThue"
-        android:layout_below="@id/SQL_HoTenThuThu"/>
-    <!--Dữ liệu SQL của ngày thuê-->
-    <!--    Ngày thuê    -->
-
-
-<!--    Thời gian trả sách    -->
-    <TextView
-        android:id="@+id/TT_ThoiGianTraSach"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Thời gian trả sách: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_NgayThue"/>
-    <!--Dữ liệu cứng của thời gian trả sách-->
-
-    <TextView
-        android:id="@+id/SQL_ThoiGianTraSach"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu thời gian trả sách"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_ThoiGianTraSach"
-        android:layout_below="@id/SQL_NgayThue"/>
-    <!--Dữ liệu SQL của thời gian trả sách-->
-    <!--    Thời gian trả sách    -->
-
-
-<!--    Trạng thái    -->
-    <TextView
-        android:id="@+id/TT_TrangThai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Trạng thái: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_ThoiGianTraSach"/>
-    <!--Dữ liệu cứng của trạng thái-->
-
-    <TextView
-        android:id="@+id/SQL_TrangThai"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu trạng thái"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_TrangThai"
-        android:layout_below="@id/SQL_ThoiGianTraSach"/>
-    <!--Dữ liệu SQL của trạng thái-->
-    <!--    Trạng thái    -->
-
-
-    <Button
-        android:id="@+id/BtnFix_LoaiSach"
-        android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@id/TT_TrangThai"
-        android:layout_toLeftOf="@+id/BtnDel_LoaiSach"
+        android:layout_marginTop="10dp"
         android:text="Chỉnh sửa"
-        android:textSize="15sp"
+        android:textColor="@color/main"
+        android:textSize="16sp"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/icon_chinh_sua"
-        android:paddingLeft="11dp"
-        android:paddingRight="11dp"
-        android:background="@drawable/radius_shape_15"
-        app:backgroundTint="@color/main"/>
+        android:layout_alignParentBottom="true"/>
+    <!--    Text Chỉnh sửa-->
 
-    <Button
-        android:id="@+id/BtnDel_LoaiSach"
+
+    <!--    Text Xoá-->
+    <TextView
+        android:id="@+id/txtDel_LoaiSach"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/TT_TrangThai"
-        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Xoá"
-        android:textSize="15sp"
+        android:textColor="@color/Delete"
         android:textStyle="bold"
-        android:drawableLeft="@drawable/icon_xoa"
-        android:paddingLeft="11dp"
-        android:paddingRight="11dp"
-        android:background="@drawable/radius_shape_15"
-        app:backgroundTint="@color/Delete"/>
-
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+    <!--    Text Chỉnh sửa-->
 
 </RelativeLayout>
