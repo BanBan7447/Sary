@@ -51,7 +51,7 @@ public class Page_Home extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home){
             drawerLayout.openDrawer(GravityCompat.START);
         }
-
+//hh
         return super.onOptionsItemSelected(item);
     }
 
