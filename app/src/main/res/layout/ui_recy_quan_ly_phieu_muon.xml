@@ -232,6 +232,7 @@
     <!--    Trạng thái    -->
 
 
+    <!--    Nút chỉnh sửa-->
     <Button
         android:id="@+id/BtnFix_PhieuMuon"
         android:layout_width="125dp"
@@ -249,6 +250,8 @@
         android:background="@drawable/radius_shape_15"
         app:backgroundTint="@color/main"/>
 
+
+    <!--    Nút xoá-->
     <Button
         android:id="@+id/BtnDel_PhieuMuon"
         android:layout_width="wrap_content"

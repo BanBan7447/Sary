@@ -1,6 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/radius_shape_18"
+    android:backgroundTint="@color/LightBlack"
+    android:padding="15dp"
+    android:layout_margin="15dp">
 
+    <!--    RecyclerView của quản lý phiếu mượn-->
+
+    <!--    Mã số thành viên-->
+    <TextView
+        android:id="@+id/TT_MaSoThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mã số: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"/>
+    <!--Dữ liệu cứng của mã số thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_MaSoThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu mã số của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/TT_MaSoThanhVien"/>
+    <!--Dữ liệu SQL của mã số Thành Viên-->
+    <!--    Mã số thành viên-->
+
+
+    <!--    Họ tên thành viên-->
+    <TextView
+        android:id="@+id/TT_HoTenThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Họ tên: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_MaSoThanhVien"/>
+    <!--Dữ liệu cứng của họ tên thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_HoTenThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu họ tên của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@id/TT_HoTenThanhVien"
+        android:layout_below="@+id/SQL_MaSoThanhVien"/>
+    <!--Dữ liệu SQL của họ tên thành viên-->
+    <!--    Họ tên thành viên-->
+
+
+    <!--    Năm sinh thành viên-->
+    <TextView
+        android:id="@+id/TT_NamSinhThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Năm Sinh: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_HoTenThanhVien"/>
+    <!--Dữ liệu cứng của năm sinh thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_NamSinhThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu năm sinh của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/TT_NamSinhThanhVien"
+        android:layout_below="@id/TT_HoTenThanhVien"/>
+    <!--    Dữ liệu SQL của năm sinh thành viên-->
+    <!--    Năm sinh thành viên-->
+
+
+    <!--    Email thành viên-->
+    <TextView
+        android:id="@+id/TT_EmailThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_NamSinhThanhVien"/>
+    <!--Dữ liệu cứng của Email thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_EmailThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu email của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_NamSinhThanhVien"
+        android:layout_toEndOf="@id/TT_EmailThanhVien"/>
+    <!--Dữ liệu SQL của Email thành viên-->
+    <!--    Email thành viên-->
+
+
+    <!--    SDT thành viên-->
+    <TextView
+        android:id="@+id/TT_SDT_ThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_EmailThanhVien"/>
+    <!--Dữ liệu cứng của SDT thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_SDT_ThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu số điện thoại của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_EmailThanhVien"
+        android:layout_toEndOf="@+id/TT_SDT_ThanhVien"/>
+    <!--Dữ liệu SQL của SDT thành viên-->
+    <!--    SDT thành viên-->
+
+
+    <!--    Địa chỉ thành viên-->
+    <TextView
+        android:id="@+id/TT_DiaChiThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_SDT_ThanhVien"/>
+    <!--Dữ liệu cứng của địa chỉ thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_DiaChiThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu địa chỉ của thành viên"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_SDT_ThanhVien"
+        android:layout_toEndOf="@+id/TT_DiaChiThanhVien"/>
+    <!--Dữ liệu SQL của địa chỉ thành viên-->
+    <!--    Địa chỉ thành viên-->
+
+
+    <!--    Quê quán thành viên-->
+    <TextView
+        android:id="@+id/TT_QueQuanThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quê quán: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_DiaChiThanhVien"/>
+    <!--Dữ liệu cứng của Quê quán thành viên-->
+
+    <TextView
+        android:id="@+id/SQL_QueQuanThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dữ liệu quê quán của thành viên: "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/TT_DiaChiThanhVien"
+        android:layout_toEndOf="@id/TT_QueQuanThanhVien"/>
+    <!--Dữ liệu SQL của Quê quán thành viên-->
+    <!--    Quê quán thành viên-->
+
+
+    <!--    Nút chỉnh sửa-->
+    <Button
+        android:id="@+id/BtnFix_ThanhVien"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/TT_QueQuanThanhVien"
+        android:layout_toLeftOf="@+id/BtnDel_ThanhVien"
+        android:text="Chỉnh sửa"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/icon_chinh_sua"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@drawable/radius_shape_15"
+        app:backgroundTint="@color/main"/>
+
+
+    <!--    Nút xoá-->
+    <Button
+        android:id="@+id/BtnDel_ThanhVien"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/TT_QueQuanThanhVien"
+        android:layout_alignParentEnd="true"
+        android:text="Xoá"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/icon_xoa"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@drawable/radius_shape_15"
+        app:backgroundTint="@color/Delete"/>
 </RelativeLayout>
