@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.FragPage_Quan_Ly_Loai_Sach">
+    tools:context=".Fragment.FragPage_Quan_Ly_Loai_Sach"
+    android:background="@color/black">
 
 </LinearLayout>
