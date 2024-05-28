@@ -25,13 +25,13 @@
             android:name=".Fragment.FragPage_Quan_Ly_Loai_Sach"
             android:exported="false" />
         <activity
-            android:name=".Page_Sign_In"
+            android:name=".Page_Intro"
             android:exported="false" />
         <activity
             android:name=".Page_Home"
             android:exported="false" />
         <activity
-            android:name=".Page_Intro"
+            android:name=".Page_Sign_In"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
