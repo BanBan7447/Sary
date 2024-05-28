@@ -21,5 +21,6 @@ public class Page_Intro extends AppCompatActivity {
                 finish();
             }
         }, 3000); // HELOOOOODDKJkjsnkjvfnksdnvjdbvjsbdfjvbdj
+        // Hello World
     }
 }
