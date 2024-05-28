@@ -20,6 +20,6 @@ public class Page_Intro extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        }, 3000); // HELOOOOODDKJkjsnkjvfnksdnvjdbvjsbdfjvbdj
     }
 }
