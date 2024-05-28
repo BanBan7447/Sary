@@ -7,15 +7,18 @@
 
     <item
         android:id="@+id/Drawer_QuanLyLoaiSach"
-        android:title="Quản lý loại sách"/>
+        android:title="Quản lý loại sách"
+        android:icon="@drawable/icon_loai_sach"/>
 
     <item
         android:id="@+id/Drawer_QuanLySach"
-        android:title="Quản lý sách"/>
+        android:title="Quản lý sách"
+        android:icon="@drawable/icon_book"/>
 
     <item
         android:id="@+id/Drawer_QuanLyThanhVien"
-        android:title="Quản lý thành viên"/>
+        android:title="Quản lý thành viên"
+        android:icon="@drawable/icon_thanh_vien"/>
 
     <item android:title="Thống kê">
         <menu>
@@ -33,10 +36,12 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:title="Đổi mật khẩu"/>
+                    android:title="Đổi mật khẩu"
+                    android:icon="@drawable/icon_password"/>
                 <item
                     android:id="@+id/Drawer_Thoat"
-                    android:title="Thoát ứng dụng"/>
+                    android:title="Thoát ứng dụng"
+                    android:icon="@drawable/icon_thoat"/>
             </group>
         </menu>
     </item>
