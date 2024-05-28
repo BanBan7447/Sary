@@ -191,43 +191,14 @@
     <!--    Giá thuê-->
 
 
-    <!--    Mã phiếu mượn-->
-    <TextView
-        android:id="@+id/TT_MaPhieu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_toEndOf="@+id/SQL_Pic_Book"
-        android:text="Mã phiếu mượn: "
-        android:textColor="@color/main"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/TT_GiaThue"/>
-    <!--Dữ liệu cứng của Mã phiếu mượn-->
-
-    <TextView
-        android:id="@+id/SQL_MaPhieu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu của mã phiếu"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/TT_GiaThue"
-        android:layout_toEndOf="@+id/TT_MaPhieu"/>
-    <!--Dữ liệu SQL của Mã phiếu mượn-->
-    <!--    Mã phiếu mượn-->
-
-
     <!--    Nút chỉnh sửa-->
     <Button
         android:id="@+id/BtnFix_Sach"
         android:layout_width="125dp"
         android:layout_height="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_below="@id/TT_MaPhieu"
+        android:layout_below="@id/TT_GiaThue"
         android:layout_toLeftOf="@+id/BtnDel_Sach"
         android:text="Chỉnh sửa"
         android:textSize="15sp"
@@ -244,8 +215,8 @@
         android:id="@+id/BtnDel_Sach"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/TT_MaPhieu"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/TT_GiaThue"
         android:layout_alignParentEnd="true"
         android:text="Xoá"
         android:textSize="15sp"

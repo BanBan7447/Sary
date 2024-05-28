@@ -63,35 +63,6 @@
     <!--Dữ liệu SQL của mã thành viên-->
     <!--    Mã thành viên    -->
 
-
-    <!--    Họ tên thành viên    -->
-    <TextView
-        android:id="@+id/TT_HoTenThanhVien"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Họ tên thành viên: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_MaThanhVien"/>
-    <!--Dữ liệu cứng của họ tên thành viên-->
-
-    <TextView
-        android:id="@+id/SQL_HoTenThanhVien"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu họ tên thành viên"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_HoTenThanhVien"
-        android:layout_below="@id/SQL_MaThanhVien"/>
-    <!--Dữ liệu SQL của họ tên thành viên-->
-    <!--    Họ tên thành viên    -->
-
-
     <!--    Mã thủ thư    -->
     <TextView
         android:id="@+id/TT_MaThuThu"
@@ -102,7 +73,7 @@
         android:textColor="@color/main"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_below="@id/TT_HoTenThanhVien"/>
+        android:layout_below="@id/TT_MaThanhVien"/>
     <!--Dữ liệu cứng của mã thủ thư-->
 
     <TextView
@@ -115,37 +86,9 @@
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_toEndOf="@id/TT_MaThuThu"
-        android:layout_below="@id/SQL_HoTenThanhVien"/>
+        android:layout_below="@id/SQL_MaThanhVien"/>
     <!--Dữ liệu SQL của mã thủ thư-->
     <!--    Mã thủ thư    -->
-
-
-    <!--    Họ tên thủ thư    -->
-    <TextView
-        android:id="@+id/TT_HoTenThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Họ tên thủ thư: "
-        android:textColor="@color/main"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_below="@id/TT_MaThuThu"/>
-    <!--Dữ liệu cứng của họ tên thủ thư-->
-
-    <TextView
-        android:id="@+id/SQL_HoTenThuThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="Dữ liệu họ tên thủ thư"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_toEndOf="@id/TT_HoTenThuThu"
-        android:layout_below="@id/SQL_MaThuThu"/>
-    <!--Dữ liệu SQL của họ tên thủ thư-->
-    <!--    Họ tên thủ thư    -->
 
 
     <!--    Ngày thuê    -->
@@ -158,7 +101,7 @@
         android:textColor="@color/main"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_below="@id/TT_HoTenThuThu"/>
+        android:layout_below="@id/TT_MaThuThu"/>
     <!--Dữ liệu cứng của ngày thuê-->
 
     <TextView
@@ -171,7 +114,7 @@
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_toEndOf="@id/TT_NgayThue"
-        android:layout_below="@id/SQL_HoTenThuThu"/>
+        android:layout_below="@id/SQL_MaThuThu"/>
     <!--Dữ liệu SQL của ngày thuê-->
     <!--    Ngày thuê    -->
 
@@ -204,6 +147,34 @@
     <!--    Thời gian trả sách    -->
 
 
+    <!--    Tiền thuê    -->
+    <TextView
+        android:id="@+id/TT_TienThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Tiền thuê: "
+        android:textColor="@color/main"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/TT_ThoiGianTraSach"/>
+    <!--Dữ liệu cứng của tiền thuê-->
+
+    <TextView
+        android:id="@+id/SQL_TienThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu tiền thuê"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_toEndOf="@id/TT_TrangThai"
+        android:layout_below="@id/SQL_ThoiGianTraSach"/>
+    <!--Dữ liệu SQL của tiền thuê-->
+    <!--    Tiền thuê    -->
+
+
     <!--    Trạng thái    -->
     <TextView
         android:id="@+id/TT_TrangThai"
@@ -214,7 +185,7 @@
         android:textColor="@color/main"
         android:textStyle="bold"
         android:textSize="15sp"
-        android:layout_below="@id/TT_ThoiGianTraSach"/>
+        android:layout_below="@id/TT_TienThue"/>
     <!--Dữ liệu cứng của trạng thái-->
 
     <TextView
@@ -227,7 +198,7 @@
         android:textStyle="bold"
         android:textSize="15sp"
         android:layout_toEndOf="@id/TT_TrangThai"
-        android:layout_below="@id/SQL_ThoiGianTraSach"/>
+        android:layout_below="@id/SQL_TienThue"/>
     <!--Dữ liệu SQL của trạng thái-->
     <!--    Trạng thái    -->
 
