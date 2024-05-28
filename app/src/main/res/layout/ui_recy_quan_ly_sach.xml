@@ -1,6 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/radius_shape_18"
+    android:backgroundTint="@color/LightBlack"
+    android:padding="15dp"
+    android:layout_margin="15dp">
+
+    <!--    Ảnh sách-->
+    <!--Dữ liệu SQL của ảnh sách-->
+    <ImageView
+        android:id="@+id/SQL_Pic_Book"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:src="@mipmap/book_1"
+        android:layout_marginRight="15dp"/>
+    <!--    Ảnh sách-->
+
+
+    <!--    Mã sách-->
+    <TextView
+        android:id="@+id/TT_MaSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Mã sách: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+    <!--Dữ liệu cứng của mã sách-->
+
+    <TextView
+        android:id="@+id/SQL_MaSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của mã sách"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@+id/TT_MaSach"/>
+    <!--Dữ liệu SQL của mã sách-->
+    <!--    Mã sách-->
+
+
+    <!--    Tên sách-->
+    <TextView
+        android:id="@+id/TT_TenSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Tên sách: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_MaSach"/>
+    <!--Dữ liệu cứng của tên sách-->
+
+    <TextView
+        android:id="@+id/SQL_TenSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của tên sách"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/SQL_MaSach"
+        android:layout_toEndOf="@+id/TT_MaSach"/>
+    <!--Dữ liệu SQL của tên sách-->
+    <!--    Tên sách-->
+
+
+    <!--    Tác giả-->
+    <TextView
+        android:id="@+id/TT_TacGia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Tác giả: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TenSach"/>
+    <!--Dữ liệu cứng của tác giả-->
+
+    <TextView
+        android:id="@+id/SQL_TacGia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của tác giả"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TenSach"
+        android:layout_toEndOf="@+id/TT_TacGia"/>
+    <!--Dữ liệu SQL của tác giả-->
+    <!--    Tác giả-->
+
+
+    <!--    Nhà xuất bản-->
+    <TextView
+        android:id="@+id/TT_NhaXuatBan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Nhà xuất bản: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TacGia"/>
+    <!--Dữ liệu cứng của nhà xuất bản-->
+
+    <TextView
+        android:id="@+id/SQL_NhaXuatBan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của nhà xuất bản"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TacGia"
+        android:layout_toEndOf="@+id/TT_NhaXuatBan"/>
+    <!--Dữ liệu SQL của nhà xuất bản-->
+    <!--    Nhà xuất bản-->
+
+
+    <!--    Thể loại-->
+    <TextView
+        android:id="@+id/TT_TheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Thể loại: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_NhaXuatBan"/>
+    <!--Dữ liệu cứng của Thể loại-->
+
+    <TextView
+        android:id="@+id/SQL_TheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của thể loại"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_NhaXuatBan"
+        android:layout_toEndOf="@+id/TT_TheLoai"/>
+    <!--Dữ liệu SQL của Thể loại-->
+    <!--    Thể loại-->
+
+
+    <!--    Giá thuê-->
+    <TextView
+        android:id="@+id/TT_GiaThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Giá thuê: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TheLoai"/>
+    <!--Dữ liệu cứng của Giá thuê-->
+
+    <TextView
+        android:id="@+id/SQL_GiaThue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của giá thuê"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_TheLoai"
+        android:layout_toEndOf="@+id/TT_GiaThue"/>
+    <!--Dữ liệu SQL của Giá thuê-->
+    <!--    Giá thuê-->
+
+
+    <!--    Mã phiếu mượn-->
+    <TextView
+        android:id="@+id/TT_MaPhieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_toEndOf="@+id/SQL_Pic_Book"
+        android:text="Mã phiếu mượn: "
+        android:textColor="@color/main"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_GiaThue"/>
+    <!--Dữ liệu cứng của Mã phiếu mượn-->
+
+    <TextView
+        android:id="@+id/SQL_MaPhieu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Dữ liệu của mã phiếu"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/TT_GiaThue"
+        android:layout_toEndOf="@+id/TT_MaPhieu"/>
+    <!--Dữ liệu SQL của Mã phiếu mượn-->
+    <!--    Mã phiếu mượn-->
+
+
+    <!--    Nút chỉnh sửa-->
+    <Button
+        android:id="@+id/BtnFix_Sach"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/TT_MaPhieu"
+        android:layout_toLeftOf="@+id/BtnDel_Sach"
+        android:text="Chỉnh sửa"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/icon_chinh_sua"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@drawable/radius_shape_15"
+        app:backgroundTint="@color/main"/>
+
+
+    <!--    Nút xoá-->
+    <Button
+        android:id="@+id/BtnDel_Sach"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/TT_MaPhieu"
+        android:layout_alignParentEnd="true"
+        android:text="Xoá"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/icon_xoa"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@drawable/radius_shape_15"
+        app:backgroundTint="@color/Delete"/>
+
 
 </RelativeLayout>

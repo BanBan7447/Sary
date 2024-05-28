@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/QLPM"
-        android:title="Quản lý phiếu mượn"/>
+        android:id="@+id/Drawer_QuanLyPhieuMuon"
+        android:title="Quản lý phiếu mượn"
+        android:icon="@drawable/icon_phieu_muon"/>
 
     <item
+        android:id="@+id/Drawer_QuanLyLoaiSach"
         android:title="Quản lý loại sách"/>
 
     <item
+        android:id="@+id/Drawer_QuanLySach"
         android:title="Quản lý sách"/>
 
     <item
+        android:id="@+id/Drawer_QuanLyThanhVien"
         android:title="Quản lý thành viên"/>
 
     <item android:title="Thống kê">
@@ -31,6 +35,7 @@
                 <item
                     android:title="Đổi mật khẩu"/>
                 <item
+                    android:id="@+id/Drawer_Thoat"
                     android:title="Thoát ứng dụng"/>
             </group>
         </menu>
