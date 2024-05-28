@@ -23,3 +23,4 @@ public class Page_Intro extends AppCompatActivity {
         }, 3000);
     }
 }
+//Hello
