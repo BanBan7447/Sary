@@ -15,8 +15,10 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(tLoaiSach);
         db.execSQL("INSERT INTO LOAISACH VALUES('Business','Kinh Doanh'),('History','Lịch Sử'),('Novel','Tiểu Thuyết'),('Literatule','Văn Học'),('Science','Khoa Học'),('Language','Ngoại Ngữ')");
 //
-//        String tSach = "CREATE TABLE SACH(maSach integer primary key autoincrement, tensach text, tacgia text, nhaxuatban text, giathue integer, maloai integer references LOAISACH(maloai), maPhieuMuon integer references PHIEUMUON(maPhieuMuon))";
-//        db.execSQL(tSach);
+        String tSach = "CREATE TABLE SACH(maSach text primary key autoincrement, tensach text, tacgia text, nhaxuatban text, theloai text, giathue integer)";
+        db.execSQL(tSach);
+        db.execSQL("INSERT INTO SACH VALUES('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
+                                          "('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)");
 //
 //        //role:
 //        // 1 - Thành Viên
@@ -25,7 +27,7 @@ public class DbHelper extends SQLiteOpenHelper {
 //        String tThanhVien = "CREATE TABLE THANHVIEN(maTV integer primary key autoincrement, hotenThanhVien text, namsinhThanhVien date, diachiThanhVien text, quequanThanhVien text, emailThanhVien text, sdtThanhVien text, PasswordThanhVien text)";
 //        db.execSQL(tThanhVien);
 //
-//        String tPhieuMuon = "CREATE TABLE PHIEUMUON(maPhieuMuon integer primary key autoincrement, ngayThue text, thoigianTra text, tienThue integer, maThanhVien integer references THANHVIEN(maTV), maThuThu integer references THUTHU(maThuThu))";
+//        String tPhieuMuon = "CREATE TABLE PHIEUMUON(maPhieuMuon text primary key autoincrement, ngayThue text, thoigianTra text, tienThue integer, maThanhVien integer references THANHVIEN(maTV), maThuThu integer references THUTHU(maThuThu))";
 //        db.execSQL(tPhieuMuon);
 
         String tThuThu = "CREATE TABLE THUTHU(maThuThu integer primary key autoincrement, hotenThuThu text, emailThuThu text, sdtThuThu text, passwordThuThu text)";

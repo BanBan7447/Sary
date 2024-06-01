@@ -31,7 +31,7 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
 
         rcvQuan_Ly_Loai_Sach = viewLoaiSach.findViewById(R.id.rcvQuan_Ly_Loai_Sach);
         loaiSachDAO = new LoaiSachDAO(getContext());
-
+        loadData();
     return viewLoaiSach;
     }
     private void loadData(){

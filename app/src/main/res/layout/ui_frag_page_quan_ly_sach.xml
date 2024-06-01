@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.FragPage_Quan_Ly_Sach"
-    android:background="#FF0000">
+    tools:context=".Fragment.FragPage_Quan_Ly_Sach">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvQuan_Ly_Sach"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
