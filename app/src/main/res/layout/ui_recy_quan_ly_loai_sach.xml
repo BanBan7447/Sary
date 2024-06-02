@@ -60,7 +60,7 @@
         android:textColor="@color/main"
         android:textStyle="bold"
         android:textSize="14sp"
-        android:layout_above="@id/txtFix_LoaiSach"/>
+        android:layout_above="@id/DiaFix_LoaiSach"/>
     <!--    Dữ liệu cứng của tên thể loại sách-->
 
     <TextView
@@ -80,7 +80,7 @@
 
     <!--    Text Chỉnh sửa-->
     <TextView
-        android:id="@+id/txtFix_LoaiSach"
+        android:id="@+id/DiaFix_LoaiSach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

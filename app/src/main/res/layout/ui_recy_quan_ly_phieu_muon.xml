@@ -205,7 +205,7 @@
 
     <!--    Nút chỉnh sửa-->
     <Button
-        android:id="@+id/BtnFix_PhieuMuon"
+        android:id="@+id/DiaFix_PhieuMuon"
         android:layout_width="125dp"
         android:layout_height="40dp"
         android:layout_marginTop="15dp"

@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chỉnh sửa sách"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/EdtFix_MaSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mã sách: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <EditText
+        android:id="@+id/EdtFix_TenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên sách: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <EditText
+        android:id="@+id/EdtFix_TacGiaSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tác giả: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <EditText
+        android:id="@+id/EdtFix_NhaXuatBanSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nhà xuất bản: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <EditText
+        android:id="@+id/EdtFix_TheLoaiSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập thể loại: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <EditText
+        android:id="@+id/EdtFix_GiaThueSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập giá thuê: "
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/radius_shape_15"
+        android:backgroundTint="@color/DrakWhite"/>
+
+    <Button
+        android:id="@+id/BtnFix_Sach"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Chỉnh sửa loại sách"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="@drawable/radius_shape_18"
+        app:backgroundTint="@color/main"/>
 
 </LinearLayout>
