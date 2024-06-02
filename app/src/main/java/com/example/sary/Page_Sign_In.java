@@ -24,7 +24,7 @@ public class Page_Sign_In extends AppCompatActivity {
         EditText edtSignin = findViewById(R.id.SignIn_MaSo);
         EditText edtPass = findViewById(R.id.SignIn_PassWord);
         Button btnSignIn = findViewById(R.id.Intro_SignIn);
-//
+
          nguoiDungDAO = new NguoiDungDAO(this);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
