@@ -28,6 +28,16 @@ public class LoaiSachDAO {
         return list;
     }
 
+    //Add
+    public boolean AddLoaiSach(String maloai, String tenloai) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("maloai", maloai);
+        values.put("tenloai", tenloai);
+        long check = db.insert("LOAISACH", null, values);
+        return check > 0;
+    }
+
     //Update
     public boolean UpdateLoaiSach(String maloai, String name) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();

@@ -29,6 +29,19 @@ public class SachDAO {
         return list;
     }
 
+    //Add
+    public boolean AddSach(String masach, String tensach, String tacgia, String nxb, String theloai, int gia) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("maSach", masach);
+        values.put("tensach", tensach);
+        values.put("tacgia", tacgia);
+        values.put("nhaxuatban", nxb);
+        values.put("theloai", theloai);
+        values.put("giathue", gia);
+        long check = db.insert("SACH", null, values);
+        return check > 0;
+    }
     //Update
     public boolean UpdateSach(String masach, String tensach, String tacgia, String nxb, String theloai, int gia) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
