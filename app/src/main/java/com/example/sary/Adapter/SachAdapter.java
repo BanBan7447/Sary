@@ -117,7 +117,6 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
         edtMasach.setEnabled(false);
 
         AlertDialog alertDialog = builder.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {

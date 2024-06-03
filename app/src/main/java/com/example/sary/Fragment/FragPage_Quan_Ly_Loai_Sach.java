@@ -62,7 +62,7 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
         rcvQuan_Ly_Loai_Sach.setAdapter(adapter);
     }
 
-    //add LoaiSach dialog
+    //Add LoaiSach dialog
     private void Add_LoaiSach() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setCancelable(false);
@@ -76,7 +76,6 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
         Button btnAdd = view.findViewById(R.id.BtnMore_LoaiSach);
 
         AlertDialog alertDialog = builder.create();
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         alertDialog.show();
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
