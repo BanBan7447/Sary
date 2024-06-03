@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.FragPage_Quan_Ly_Thanh_Vien">
+    tools:context=".Fragment.FragPage_Quan_Ly_Thanh_Vien"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/TT_QuanLyThanhVien"
