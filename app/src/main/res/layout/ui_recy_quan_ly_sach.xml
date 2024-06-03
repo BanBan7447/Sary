@@ -86,7 +86,7 @@
         android:textColor="@color/main"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@+id/TT_TenSach"/>
+        android:layout_below="@+id/SQL_TenSach"/>
     <!--Dữ liệu cứng của tác giả-->
 
     <TextView
@@ -98,7 +98,7 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
-        android:layout_below="@+id/TT_TenSach"
+        android:layout_below="@+id/SQL_TenSach"
         android:layout_toEndOf="@+id/TT_TacGia"/>
     <!--Dữ liệu SQL của tác giả-->
     <!--    Tác giả-->

@@ -1,5 +1,6 @@
 package com.example.sary.DAO;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,5 +27,25 @@ public class SachDAO {
             }while (cursor.moveToNext());
         }
         return list;
+    }
+
+    //Update
+    public boolean UpdateSach(String masach, String tensach, String tacgia, String nxb, String theloai, int gia) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("tensach", tensach);
+        values.put("tacgia", tacgia);
+        values.put("nhaxuatban", nxb);
+        values.put("theloai", theloai);
+        values.put("giathue", gia);
+        long check = db.update("SACH", values, "maSach=?", new String[]{String.valueOf(masach)});
+        return check > 0;
+    }
+
+    //Delete
+    public boolean DeleteSach(String masach) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        long check = db.delete("SACH", "maSach=? ", new String[]{String.valueOf(masach)});
+        return check > 0;
     }
 }

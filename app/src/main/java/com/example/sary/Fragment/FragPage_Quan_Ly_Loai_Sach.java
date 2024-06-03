@@ -1,16 +1,15 @@
 package com.example.sary.Fragment;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sary.Adapter.LoaiSachAdapter;
 import com.example.sary.DAO.LoaiSachDAO;
@@ -32,13 +31,14 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
         rcvQuan_Ly_Loai_Sach = viewLoaiSach.findViewById(R.id.rcvQuan_Ly_Loai_Sach);
         loaiSachDAO = new LoaiSachDAO(getContext());
         loadData();
-    return viewLoaiSach;
+        return viewLoaiSach;
     }
-    private void loadData(){
+
+    private void loadData() {
         ArrayList<LoaiSach> list = loaiSachDAO.getDSLoaiSach();
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        rcvQuan_Ly_Loai_Sach.setLayoutManager(linearLayoutManager);
+        GridLayoutManager manager = new GridLayoutManager(getContext(), 2);
+        rcvQuan_Ly_Loai_Sach.setLayoutManager(manager);
 
         LoaiSachAdapter adapter = new LoaiSachAdapter(getContext(), list);
         rcvQuan_Ly_Loai_Sach.setAdapter(adapter);

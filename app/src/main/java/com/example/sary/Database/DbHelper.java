@@ -11,14 +11,15 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // tạo bảng loại sách
-        String tLoaiSach = "CREATE TABLE LOAISACH(maloai text primary key autoincrement, tenloai text)";
+        String tLoaiSach = "CREATE TABLE LOAISACH(maloai text primary key, tenloai text)";
         db.execSQL(tLoaiSach);
         db.execSQL("INSERT INTO LOAISACH VALUES('Business','Kinh Doanh'),('History','Lịch Sử'),('Novel','Tiểu Thuyết'),('Literatule','Văn Học'),('Science','Khoa Học'),('Language','Ngoại Ngữ')");
 //
-        String tSach = "CREATE TABLE SACH(maSach text primary key autoincrement, tensach text, tacgia text, nhaxuatban text, theloai text, giathue integer)";
+        String tSach = "CREATE TABLE SACH(maSach text primary key, tensach text, tacgia text, nhaxuatban text, theloai text, giathue integer)";
         db.execSQL(tSach);
         db.execSQL("INSERT INTO SACH VALUES('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
-                                          "('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)");
+                                            "('SAKD02','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
+                                            "('SAKD03','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)");
 //
 //        //role:
 //        // 1 - Thành Viên

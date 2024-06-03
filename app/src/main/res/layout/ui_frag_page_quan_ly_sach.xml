@@ -10,7 +10,7 @@
         android:id="@+id/TT_QuanLySach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quản lý loại sách"
+        android:text="Quản lý sách"
         android:textStyle="bold"
         android:textSize="24sp"
         android:gravity="center"
