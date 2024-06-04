@@ -24,9 +24,11 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
+                    android:id="@+id/Drawer_ThongKeDoanhThu"
                     android:title="Thống kê doanh thu"/>
 
                 <item
+                    android:id="@+id/Drawer_Top_Sach"
                     android:title="Top 10 sách"/>
             </group>
         </menu>
@@ -36,6 +38,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
+                    android:id="@+id/Drawer_ChangePass"
                     android:title="Đổi mật khẩu"
                     android:icon="@drawable/icon_password"/>
                 <item

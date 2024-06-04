@@ -22,6 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nhập mật khẩu cũ: "
+        android:inputType="textPassword"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -59,7 +60,7 @@
         android:padding="15dp"/>
 
     <Button
-        android:id="@+id/btn_SignIn"
+        android:id="@+id/btn_ChangePass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đổi mật khẩu"
