@@ -11,11 +11,25 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // tạo bảng loại sách
-        String tLoaiSach = "CREATE TABLE LOAISACH(maloai text primary key, tenloai text)";
+        String tLoaiSach = "CREATE TABLE LOAISACH(" +
+                "maloai text primary key," +
+                "tenloai text)";
         db.execSQL(tLoaiSach);
-        db.execSQL("INSERT INTO LOAISACH VALUES('Business','Kinh Doanh'),('History','Lịch Sử'),('Novel','Tiểu Thuyết'),('Literatule','Văn Học'),('Science','Khoa Học'),('Language','Ngoại Ngữ')");
-//
-        String tSach = "CREATE TABLE SACH(maSach text primary key, tensach text, tacgia text, nhaxuatban text, theloai text, giathue integer)";
+
+        db.execSQL("INSERT INTO LOAISACH VALUES" +
+                "('Business','Kinh Doanh')," +
+                "('History','Lịch Sử')," +
+                "('Novel','Tiểu Thuyết')," +
+                "('Literatule','Văn Học')," +
+                "('Science','Khoa Học')," +
+                "('Language','Ngoại Ngữ')");
+
+
+        String tSach = "CREATE TABLE SACH(" +
+                "maSach text primary key," +
+                "tensach text, tacgia text," +
+                "nhaxuatban text, theloai text," +
+                "giathue integer)";
         db.execSQL(tSach);
         db.execSQL("INSERT INTO SACH VALUES('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
                                             "('SAKD02','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
@@ -31,7 +45,11 @@ public class DbHelper extends SQLiteOpenHelper {
 //        String tPhieuMuon = "CREATE TABLE PHIEUMUON(maPhieuMuon text primary key autoincrement, ngayThue text, thoigianTra text, tienThue integer, maThanhVien integer references THANHVIEN(maTV), maThuThu integer references THUTHU(maThuThu))";
 //        db.execSQL(tPhieuMuon);
 
-        String tThuThu = "CREATE TABLE THUTHU(maThuThu integer primary key autoincrement, hotenThuThu text, emailThuThu text, sdtThuThu text, passwordThuThu text)";
+        String tThuThu = "CREATE TABLE THUTHU(" +
+                "maThuThu integer primary key autoincrement," +
+                "hotenThuThu text, emailThuThu text," +
+                "sdtThuThu text," +
+                "passwordThuThu text)";
         db.execSQL(tThuThu);
         db.execSQL("INSERT INTO THUTHU VALUES(1,'Nguyễn Văn A','nguyenvana@gmail.com','0123456789','1225')");
     }
