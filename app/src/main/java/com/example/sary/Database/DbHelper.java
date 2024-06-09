@@ -27,8 +27,10 @@ public class DbHelper extends SQLiteOpenHelper {
 
         String tSach = "CREATE TABLE SACH(" +
                 "maSach text primary key," +
-                "tensach text, tacgia text," +
-                "nhaxuatban text, theloai text," +
+                "tensach text," +
+                "tacgia text," +
+                "nhaxuatban text," +
+                "theloai text," +
                 "giathue integer)";
         db.execSQL(tSach);
         db.execSQL("INSERT INTO SACH VALUES('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
@@ -47,7 +49,8 @@ public class DbHelper extends SQLiteOpenHelper {
 
         String tThuThu = "CREATE TABLE THUTHU(" +
                 "maThuThu integer primary key autoincrement," +
-                "hotenThuThu text, emailThuThu text," +
+                "hotenThuThu text," +
+                "emailThuThu text," +
                 "sdtThuThu text," +
                 "passwordThuThu text)";
         db.execSQL(tThuThu);

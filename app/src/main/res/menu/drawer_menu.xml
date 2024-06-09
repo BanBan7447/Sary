@@ -25,11 +25,13 @@
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/Drawer_ThongKeDoanhThu"
-                    android:title="Thống kê doanh thu"/>
+                    android:title="Thống kê doanh thu"
+                    android:icon="@drawable/icon_doanh_thu"/>
 
                 <item
                     android:id="@+id/Drawer_Top_Sach"
-                    android:title="Top 10 sách"/>
+                    android:title="Top 10 sách"
+                    android:icon="@drawable/number_ten_icon"/>
             </group>
         </menu>
     </item>

@@ -81,6 +81,13 @@ public class Page_Home extends AppCompatActivity {
                 return false;
             }
         });
+
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.Page_Replace, new FragPage_Quan_Ly_Phieu_Muon())
+                    .commit();
+            toolbar.setTitle(("Quản lý phiếu mượn"));
+        }
     }
 
     @Override
@@ -103,16 +110,48 @@ public class Page_Home extends AppCompatActivity {
 
         builder.setView(viewChangePass);
 
-        builder.setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
+//        builder.setPositiveButton("Hủy", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//
+//            }
+//        });
 
-            }
-        });
+//        builder.setNegativeButton("Cập nhật", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int which) {
+//                String oldPass = edtOldPass.getText().toString();
+//                String newPass = edtNewPass.getText().toString();
+//                String againPass = edtAgainPass.getText().toString();
+//
+//                if (newPass.equals(againPass)){
+//                    SharedPreferences sharedPreferences = getSharedPreferences("ThongTin", MODE_PRIVATE);
+//                    String MaThuThu = sharedPreferences.getString("maThuThu", "");
+//                    // cập nhật
+//                    NguoiDungDAO nguoiDungDAO = new NguoiDungDAO(Page_Home.this);
+//                    boolean check = nguoiDungDAO.CapNhatMatKhau(MaThuThu, oldPass, newPass);
+//
+//                    if (check){
+//                        Toast.makeText(Page_Home.this, "Cập nhật mật khẩu thành công", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(Page_Home.this, Page_Sign_In.class);
+//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                        startActivity(intent);
+//
+//                    }else {
+//                        Toast.makeText(Page_Home.this, "Cập nhật mật khẩu thất bại", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                }else {
+//                    Toast.makeText(Page_Home.this, "Nhập mật khẩu không trùng", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
-        builder.setNegativeButton("Cập nhật", new DialogInterface.OnClickListener() {
+
+        Button btnChangPass = viewChangePass.findViewById(R.id.btn_ChangePass);
+        btnChangPass.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(View v) {
                 String oldPass = edtOldPass.getText().toString();
                 String newPass = edtNewPass.getText().toString();
                 String againPass = edtAgainPass.getText().toString();
@@ -142,40 +181,8 @@ public class Page_Home extends AppCompatActivity {
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+        alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.radius_dialog));
 
-        Button btnChangPass = viewChangePass.findViewById(R.id.btn_ChangePass);
-//        btnChangPass.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String oldPass = edtOldPass.getText().toString();
-//                String newPass = edtNewPass.getText().toString();
-//                String againPass = edtAgainPass.getText().toString();
-//
-//                if (newPass.equals(againPass)){
-//                    SharedPreferences sharedPreferences = getSharedPreferences("ThongTin", MODE_PRIVATE);
-//                    String MaThuThu = sharedPreferences.getString("maThuThu", "");
-//                    // cập nhật
-//                    NguoiDungDAO nguoiDungDAO = new NguoiDungDAO(Page_Home.this);
-//                    boolean check = nguoiDungDAO.CapNhatMatKhau(MaThuThu, oldPass, newPass);
-//
-//                    if (check){
-//                        Toast.makeText(Page_Home.this, "Cập nhật mật khẩu thành công", Toast.LENGTH_SHORT).show();
-//                        Intent intent = new Intent(Page_Home.this, Page_Sign_In.class);
-//                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                        startActivity(intent);
-//
-//                    }else {
-//                        Toast.makeText(Page_Home.this, "Cập nhật mật khẩu thất bại", Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                }else {
-//                    Toast.makeText(Page_Home.this, "Nhập mật khẩu không trùng", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
-
-//        AlertDialog alertDialog = builder.create();
-//        alertDialog.show();
     }
 
     //    @Override
