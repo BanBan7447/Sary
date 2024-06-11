@@ -7,29 +7,30 @@
     tools:context=".Fragment.FragPage_Quan_Ly_Sach"
     android:background="@color/white">
 
+    <TextView
+        android:id="@+id/TT_QuanLySach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản lý sách"
+        android:layout_marginTop="24sp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/Sach_ToolBar"
         app:title=""
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:layout_below="@+id/TT_QuanLySach">
     </androidx.appcompat.widget.Toolbar>
-
-    <TextView
-        android:id="@+id/TT_QuanLySach"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:layout_below="@+id/Sach_ToolBar"
-        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvQuan_Ly_Sach"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/TT_QuanLySach"/>
+        android:layout_below="@+id/Sach_ToolBar"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/TxtMore_Sach"
