@@ -137,6 +137,8 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
         searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
 
         searchView.setIconified(true);
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setIconified(false);
 
         SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
