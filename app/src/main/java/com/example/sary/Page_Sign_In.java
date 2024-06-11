@@ -52,7 +52,7 @@ public class Page_Sign_In extends AppCompatActivity {
                 String user = SignIn_MaSo.getText().toString();
                 String pass = SignIn_PassWord.getText().toString();
 
-                //boolean check = nguoiDungDAO.KiemTraDangNhap(user, pass);
+                boolean check = nguoiDungDAO.KiemTraDangNhap(user, pass);
                 if (user.length() == 0 || pass.length() == 0){
                     Toast.makeText(Page_Sign_In.this, "Phải nhập đẩy đủ", Toast.LENGTH_SHORT).show();
                 } else if (nguoiDungDAO.KiemTraDangNhap(user, pass)) {
@@ -65,6 +65,7 @@ public class Page_Sign_In extends AppCompatActivity {
                 }else {
                     Toast.makeText(Page_Sign_In.this, "Mã số hoặc mật khẩu bị sai", Toast.LENGTH_SHORT).show();
                 }
+
 
 
 //                if (user.length() == 0 || pass.length() == 0){
