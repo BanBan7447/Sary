@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,13 +26,15 @@ import com.example.sary.R;
 
 import java.util.ArrayList;
 
-public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
+public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> implements Filterable {
     private Context context;
     private ArrayList<Sach> list;
+    private ArrayList<Sach> listold;
 
     public SachAdapter(Context context, ArrayList<Sach> list) {
         this.context = context;
         this.list = list;
+        this.listold = list;
     }
 
     @NonNull
@@ -48,6 +53,18 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
         holder.SQL_NhaXuatBan.setText(list.get(position).getNhaxuatban());
         holder.SQL_TheLoai.setText(list.get(position).getTheloai());
         holder.SQL_GiaThue.setText(String.valueOf(list.get(position).getGiathue()));
+
+        //add img
+        if (list.size()>4)
+            holder.SQL_Pic_Book.setImageResource(R.mipmap.book_1);
+            if (position == 1)
+                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_2);
+            if (position == 2)
+                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_3);
+            if (position == 3)
+                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_4);
+            if (position == 4)
+                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_5);
 
         //Delete
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -74,9 +91,12 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
         return list.size();
     }
 
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView SQL_MaSach, SQL_TenSach, SQL_TacGia, SQL_NhaXuatBan, SQL_TheLoai, SQL_GiaThue;
         Button DiaFix, btnDelete;
+        ImageView SQL_Pic_Book;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,6 +109,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
             SQL_GiaThue = itemView.findViewById(R.id.SQL_GiaThue);
             DiaFix = itemView.findViewById(R.id.DiaFix_Sach);
             btnDelete = itemView.findViewById(R.id.BtnDel_Sach);
+            SQL_Pic_Book = itemView.findViewById(R.id.SQL_Pic_Book);
         }
     }
 
@@ -130,4 +151,36 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder>{
             }
         });
     }
+
+    //Filter
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String stsea = constraint.toString();
+                if (stsea.isEmpty()) {
+                    list = listold;
+                } else {
+                    ArrayList<Sach> listclone = new ArrayList<>();
+                    for (Sach sach:listold) {
+                        if (sach.getTensach().toLowerCase().contains(stsea.toLowerCase())) {
+                            listclone.add(sach);
+                        }
+                    }
+                    list = listclone;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = list;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                list = (ArrayList<Sach>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
+
 }

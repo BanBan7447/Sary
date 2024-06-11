@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
     public DbHelper(Context context){
-        super(context, "QUANLYTHUVIEN", null, 1);
+        super(context, "QUANLYTHUVIEN", null, 2);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -34,8 +34,10 @@ public class DbHelper extends SQLiteOpenHelper {
                 "giathue integer)";
         db.execSQL(tSach);
         db.execSQL("INSERT INTO SACH VALUES('SAKD01','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
-                                            "('SAKD02','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)," +
-                                            "('SAKD03','Nghệ thuật lấy lòng khách hàng','Michael J.Maher','Thế Giới','Kinh doanh', 10000)");
+                                            "('SAKD02','Nhà Giả Kim','Paul Coelho','Thế Giới','Kinh doanh', 11000)," +
+                                            "('SAKD03','Luật Hấp Dẫn','Prentice Mulford','Thế Giới','Kinh doanh', 9000)," +
+                                            "('SAKD04','Thần Số Học','Hans Decoz','Thế Giới','Kinh doanh', 12000)," +
+                                            "('SAKD05','Tư Duy Ngược','Jonah Sachs','Thế Giới','Kinh doanh', 15000)");
 //
 //        //role:
 //        // 1 - Thành Viên
@@ -61,6 +63,8 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion != newVersion) {
             db.execSQL("DROP TABLE IF EXISTS THUTHU");
+            db.execSQL("DROP TABLE IF EXISTS SACH");
+            db.execSQL("DROP TABLE IF EXISTS LOAISACH");
             onCreate(db);
         }
     }

@@ -42,10 +42,10 @@
         android:id="@+id/BtnMore_LoaiSach"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Thêm loại sách mới"
-        android:textStyle="bold"
-        android:textSize="18dp"
         android:background="@drawable/radius_shape_18"
-        app:backgroundTint="@color/main"/>
+        android:text="Thêm loại sách mới"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/main" />
 
 </LinearLayout>

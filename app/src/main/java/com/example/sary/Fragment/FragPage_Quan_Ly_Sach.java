@@ -1,9 +1,15 @@
 package com.example.sary.Fragment;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -13,7 +19,12 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,6 +40,9 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
     private RecyclerView rcvQuan_Ly_Sach;
     private SachDAO sachDAO;
     ArrayList<Sach> list;
+    private SearchView searchView;
+    private Toolbar toolbar;
+    private SachAdapter adapter;
 
     @Nullable
     @Override
@@ -37,6 +51,11 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
 
         rcvQuan_Ly_Sach = viewSach.findViewById(R.id.rcvQuan_Ly_Sach);
         FloatingActionButton TxtMore_Sach = viewSach.findViewById(R.id.TxtMore_Sach);
+
+        toolbar = viewSach.findViewById(R.id.Sach_ToolBar);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        activity.setSupportActionBar(toolbar);
+        activity.getSupportActionBar().setTitle("");
 
         sachDAO = new SachDAO(getContext());
         loadData();
@@ -54,12 +73,11 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
 
     private void loadData() {
         list = sachDAO.getDSSach();
-        list.add(new Sach("SAKD01", "Nghệ thuật lấy lòng khách hàng", "Michael J.Maher", "Thế Giới", "Kinh doanh", 10000));
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         rcvQuan_Ly_Sach.setLayoutManager(linearLayoutManager);
 
-        SachAdapter adapter = new SachAdapter(getContext(), list);
+        adapter = new SachAdapter(getContext(), list);
         rcvQuan_Ly_Sach.setAdapter(adapter);
     }
 
@@ -100,5 +118,40 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
                     Toast.makeText(getContext(), "Mã sách đã tồn tại", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+//Search
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+
+        searchView.setIconified(true);
+
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+               adapter.getFilter().filter(query);
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+
+                return true;
+            }
+        });
+
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }
