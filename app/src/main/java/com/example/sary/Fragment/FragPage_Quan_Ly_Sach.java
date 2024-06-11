@@ -84,7 +84,7 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
     //Add Sach dialog
     private void Add_Sach() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setCancelable(false);
+        //builder.setCancelable(false);
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.ui_dialog_them_sach, null);
         builder.setView(view);
@@ -116,6 +116,8 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
                     sachDAO.AddSach(edtMasach.getText().toString(), edtTensach.getText().toString(), edtTacgia.getText().toString(), edtNXB.getText().toString(), edtTheloai.getText().toString(), Integer.parseInt(edtGiathue.getText().toString()));
                     loadData();
                     alertDialog.dismiss();
+                } else if (edtTensach.length() == 0 || edtTacgia.length() == 0 || edtNXB.length() == 0 || edtTheloai.length() == 0 || edtGiathue.length() == 0) {
+                    Toast.makeText(getContext(), "Chưa nhập thông tin của sách", Toast.LENGTH_SHORT).show();
                 } else
                     Toast.makeText(getContext(), "Mã sách đã tồn tại", Toast.LENGTH_SHORT).show();
             }

@@ -81,7 +81,7 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
     //Add LoaiSach dialog
     private void Add_LoaiSach() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setCancelable(false);
+        //builder.setCancelable(false);
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.ui_dialog_them_loai_sach, null);
         builder.setView(view);
@@ -93,6 +93,7 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+        alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.radius_dialog));
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,7 +109,9 @@ public class FragPage_Quan_Ly_Loai_Sach extends Fragment { // Chuyển trang Act
                     loaiSachDAO.AddLoaiSach(editMaloai.getText().toString(), editTenLoai.getText().toString());
                     loadData();
                     alertDialog.dismiss();
-                } else
+                } else if (editMaloai.length() == 0 || editTenLoai.length() ==0 ){
+                    Toast.makeText(getContext(), "Chưa nhập thông tin của loại sách", Toast.LENGTH_SHORT).show();
+                }else
                     Toast.makeText(getContext(), "Mã loại sách đã tồn tại", Toast.LENGTH_SHORT).show();
             }
         });

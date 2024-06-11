@@ -104,6 +104,7 @@ public class LoaiSachAdapter extends RecyclerView.Adapter<LoaiSachAdapter.ViewHo
         edtMaloai.setEnabled(false);
 
         AlertDialog alertDialog = builder.create();
+        alertDialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.radius_dialog));
         alertDialog.show();
 
         btnUpdate.setOnClickListener(new View.OnClickListener() {
