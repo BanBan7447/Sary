@@ -11,7 +11,7 @@
         android:id="@+id/TT_QuanLyThanhVien"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quản lý loại sách"
+        android:text="Quản lý thành viên"
         android:textStyle="bold"
         android:textSize="24sp"
         android:gravity="center"
