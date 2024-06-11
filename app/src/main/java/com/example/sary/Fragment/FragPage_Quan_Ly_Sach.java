@@ -99,6 +99,8 @@ public class FragPage_Quan_Ly_Sach extends Fragment { // Chuyển trang Activity
 
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+        alertDialog.getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.radius_dialog));
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
