@@ -2,8 +2,6 @@ package com.example.sary.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.sary.DAO.LoaiSachDAO;
 import com.example.sary.DAO.SachDAO;
-import com.example.sary.Model.LoaiSach;
 import com.example.sary.Model.Sach;
 import com.example.sary.R;
 
@@ -40,7 +36,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> im
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+        LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         View view = inflater.inflate(R.layout.ui_recy_quan_ly_sach, parent, false);
         return new ViewHolder(view);
     }
@@ -55,16 +51,16 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> im
         holder.SQL_GiaThue.setText(String.valueOf(list.get(position).getGiathue()));
 
         //add img
-        if (list.size()>4)
+        if (list.get(position).getMaSach().equals("SAKD01"))
             holder.SQL_Pic_Book.setImageResource(R.mipmap.book_1);
-            if (position == 1)
-                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_2);
-            if (position == 2)
-                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_3);
-            if (position == 3)
-                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_4);
-            if (position == 4)
-                holder.SQL_Pic_Book.setImageResource(R.mipmap.book_5);
+        if (list.get(position).getMaSach().equals("SAKD02"))
+            holder.SQL_Pic_Book.setImageResource(R.mipmap.book_2);
+        if (list.get(position).getMaSach().equals("SAKD03"))
+            holder.SQL_Pic_Book.setImageResource(R.mipmap.book_3);
+        if (list.get(position).getMaSach().equals("SAKD04"))
+            holder.SQL_Pic_Book.setImageResource(R.mipmap.book_4);
+        if (list.get(position).getMaSach().equals("SAKD05"))
+            holder.SQL_Pic_Book.setImageResource(R.mipmap.book_5);
 
         //Delete
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -92,8 +88,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> im
     }
 
 
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView SQL_MaSach, SQL_TenSach, SQL_TacGia, SQL_NhaXuatBan, SQL_TheLoai, SQL_GiaThue;
         Button DiaFix, btnDelete;
         ImageView SQL_Pic_Book;
@@ -114,7 +109,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> im
     }
 
     //Hàm update Sach
-    public void updateSach(int i){
+    public void updateSach(int i) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -163,7 +158,7 @@ public class SachAdapter extends RecyclerView.Adapter<SachAdapter.ViewHolder> im
                     list = listold;
                 } else {
                     ArrayList<Sach> listclone = new ArrayList<>();
-                    for (Sach sach:listold) {
+                    for (Sach sach : listold) {
                         if (sach.getTensach().toLowerCase().contains(stsea.toLowerCase())) {
                             listclone.add(sach);
                         }
